@@ -1,0 +1,219 @@
+:root {
+  --paragraph-color: #1f1249;
+  --button-gradient: linear-gradient(113.87deg, #2663df 14.81%, #758ff0 88.76%);
+  --main-border-radius: 10px;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url(/fonts/Mulish-Regular.ttf) format("truetype"),
+    url(/fonts/Mulish-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Abdoullah Ashgar EL-kharef";
+  src: url(/fonts/Abdoullah\ Ashgar\ EL-kharef\ Regular.ttf) format("truetype");
+}
+
+/* Start Main Rules */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Mulish;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg-img.png");
+  background-size: 100% 100%;
+  opacity: 60%;
+  z-index: -1;
+}
+
+.card {
+  padding: 60px;
+  background-color: hsla(228, 100%, 98%, 0.85);
+  border-radius: var(--main-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-inline: 10px;
+}
+
+.card.hidden {
+  display: none;
+}
+
+.necklace {
+  max-width: 100%;
+}
+
+.title {
+  font-family: Abdoullah Ashgar EL-kharef;
+  font-weight: 400;
+  font-size: 42px;
+}
+
+.title.welcome {
+  font-size: 56px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: var(--paragraph-color);
+  margin-block: 20px 40px;
+}
+
+.btn {
+  width: 100%;
+  height: 60px;
+  background-image: var(--button-gradient);
+  border: none;
+  border-radius: var(--main-border-radius);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0px 6px 18px #9cadf2;
+  cursor: pointer;
+  transition: 70ms ease-out;
+  outline: none;
+}
+
+.btn:active {
+  box-shadow: none;
+}
+/* End Main Rules */
+
+/* Start Create Account Page */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+form .input {
+  position: relative;
+}
+
+form input {
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  border-radius: var(--main-border-radius);
+  height: 60px;
+  padding-left: 60px;
+  background-repeat: no-repeat;
+  background-position: 20px 50%;
+  width: 100%;
+}
+
+input.username {
+  background-image: url("../images/user-icon.png");
+}
+
+input.email {
+  background-image: url("../images/email-icon.png");
+}
+
+input.password {
+  background-image: url("../images/password-icon.png");
+}
+
+input.confirm-password {
+  background-image: url("../images/password-icon.png");
+}
+
+form .input .error-message {
+  position: absolute;
+  padding: 10px;
+  top: calc(100% + 30px);
+  left: 50%;
+  translate: -50% 0;
+  background-color: #f44336;
+  border-radius: var(--main-border-radius);
+  opacity: 0;
+  width: 50%;
+  color: white;
+  text-align: center;
+  z-index: -1;
+}
+
+form .input .error-message.toggle {
+  animation: toggle-error 4s ease-in;
+  z-index: 10;
+}
+
+form .input .error-message.toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  translate: -50% 0;
+  border: 20px solid transparent;
+  border-bottom-color: #f44336;
+}
+/* End Create Account Page */
+
+/* Start Greeting Page */
+
+.user-email {
+  text-align: center;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Start Greeting Page */
+
+/* Start Media */
+@media (max-width: 992px) {
+  .card {
+    max-width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+    margin-inline: 0;
+  }
+
+  .card .flex-item:last-child {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .title.welcome {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+/* End Media */
+@keyframes toggle-error {
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

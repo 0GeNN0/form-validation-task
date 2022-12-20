@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="./scripts/index.js" defer></script>
+    <title data-titleText="Welcome">Welcome</title>
+  </head>
+  <body>
+    <!-- Start Welcome Page -->
+    <div class="card" data-pageName="Welcome">
+      <div class="flex-item">
+        <img
+          src="./images/welcome.png"
+          alt="necklace with a ball"
+          class="necklace"
+        />
+      </div>
+      <div class="flex-item">
+        <h1 class="title welcome">Welcome</h1>
+        <p class="subtitle">We’re glad you’re here! Sign up to start</p>
+        <button class="btn" id="get-started">Get Started</button>
+      </div>
+    </div>
+    <!-- End Welcome Page -->
+
+    <!-- Start Create Account Page -->
+    <div class="card hidden" data-pageName="Create">
+      <div class="flex-item">
+        <img
+          src="./images/create-account.png"
+          alt="necklace with cicle and two balls"
+          class="necklace"
+        />
+      </div>
+      <div class="flex-item">
+        <h1 class="title">Create Account</h1>
+        <p class="subtitle">
+          Go ahead and sign up, let everyone know how awesome you are!
+        </p>
+        <form data-form>
+          <div class="input">
+            <input
+              type="text"
+              required
+              placeholder="Username"
+              data-username
+              class="username"
+            />
+            <p class="error-message"></p>
+          </div>
+          <div class="input">
+            <input
+              type="email"
+              required
+              placeholder="Email"
+              data-email
+              class="email"
+            />
+            <p class="error-message"></p>
+          </div>
+          <div class="input">
+            <input
+              type="password"
+              required
+              placeholder="Password"
+              class="password"
+              data-password
+            />
+            <p class="error-message"></p>
+          </div>
+          <div class="input">
+            <input
+              type="password"
+              required
+              placeholder="Confirm Password"
+              class="confirm-password"
+              data-confirmPassword
+            />
+            <p class="error-message"></p>
+          </div>
+          <button class="btn" id="create">Create Account</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Create Account Page -->
+
+    <!-- Start Greeting Page -->
+    <div class="card hidden" data-pageName="Greeting">
+      <div class="flex-item">
+        <img
+          src="./images/successfuly.png"
+          alt="necklace with a heart"
+          class="necklace"
+        />
+      </div>
+      <div class="flex-item">
+        <h1 class="title">Successfully logged in</h1>
+        <p class="user-email" data-userEmail>User@gmail.com</p>
+      </div>
+    </div>
+    <!-- End Greeting Page -->
+  </body>
+</html>
