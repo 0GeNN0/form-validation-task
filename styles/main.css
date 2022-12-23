@@ -6,13 +6,14 @@
 
 @font-face {
   font-family: "Mulish";
-  src: url(/fonts/Mulish-Regular.ttf) format("truetype"),
-    url(/fonts/Mulish-Bold.ttf) format("truetype");
+  src: url(../fonts/Mulish-Regular.ttf) format("truetype"),
+    url(../fonts/Mulish-Bold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Abdoullah Ashgar EL-kharef";
-  src: url(/fonts/Abdoullah\ Ashgar\ EL-kharef\ Regular.ttf) format("truetype");
+  src: url(../fonts/Abdoullah\ Ashgar\ EL-kharef\ Regular.ttf)
+    format("truetype");
 }
 
 /* Start Main Rules */
